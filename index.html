@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PYGC - Paraguayan Guarani Coin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Share Tech Mono', monospace, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #000;
+      color: #d4af37;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
+    .coin-img {
+      width: 120px;
+      height: auto;
+      filter: drop-shadow(0 0 6px #d4af37);
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 6px #d4af37); }
+      to { filter: drop-shadow(0 0 14px #fff3b0); }
+    }
+    .pygc-label {
+  margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #e6c667;
+  text-shadow: 0 0 4px #aa8f22;
+  user-select: none;
+}
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px #d4af37;
+      margin-top: -10px;
+    }
+    p {
+      max-width: 600px;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: #e6c667;
+      text-shadow: 0 0 4px #aa8f22;
+    }
+    .features {
+      display: flex;
+      gap: 1.5rem;
+      max-width: 800px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .feature-item {
+      background: linear-gradient(145deg, #2e2a1a, #000000);
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      flex: 1 1 150px;
+      max-width: 180px;
+      box-shadow: 0 0 10px #d4af37;
+      color: #fff7b0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .feature-item:hover {
+      box-shadow: 0 0 18px #fff3b0;
+    }
+    .feature-title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #d4af37;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+    .feature-desc {
+      font-size: 1rem;
+      color: #e6c667;
+      text-align: center;
+      line-height: 1.3;
+    }
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 2.7rem;
+      align-items: center;
+      width: 100%;
+      max-width: 320px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #d4af37, #f9d976);
+      border: none;
+      color: #000;
+      font-weight: 700;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 12px #d4af37;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      user-select: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background: linear-gradient(135deg, #f9d976, #d4af37);
+      box-shadow: 0 0 18px #fff3b0;
+      outline: none;
+      color: #111;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      border-top: 1px solid #d4af37;
+      font-size: 0.9rem;
+      color: #d4af37;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .coin-img {
+        width: 90px;
+      }
+      .pygc-label {
+        font-size: 1.4rem;
+      }
+      .btn-primary {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+      }
+      .features {
+        flex-direction: column;
+        max-width: 100%;
+      }
+      .feature-item {
+        max-width: 100%;
+      }
+      .btn-container {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="coin-img" src="PYGC-d4af37.png" alt="Paraguayan Guarani Coin" />
+    <div class="pygc-label">PYGC</div>
+    <h1>Paraguayan Guarani Coin</h1>
+    <p>Un token digital, respaldado por guaraníes paraguayos.</p>
+    <div class="features">
+      <div class="feature-item">
+        <div class="feature-title">Rentable</div>
+        <div class="feature-desc">Costos operativos reducidos y transferencias al instante.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Seguro y regulado</div>
+        <div class="feature-desc">Respaldo 1:1 en guaraníes bancarizados, emitido bajo control transparente.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Transparente</div>
+        <div class="feature-desc">Respaldo verificado y reportes públicos que garantizan confianza absoluta.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Accesible</div>
+        <div class="feature-desc">Disponible 24/7, sin intermediarios, desde cualquier parte del mundo.</div>
+      </div>
+    </div>
+    <div class="btn-container">
+      <a href="PYGC-Guía-de-Compra.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">Guía de Compra</a>
+      <a href="https://drive.google.com/drive/folders/1CKEDhqzdn3LjqDLdVV6kAXMbYvtAb-Bc" target="_blank" rel="noopener noreferrer" class="btn-primary">Respaldo del Token</a>
+      <a href="PYGC-Libro-Blanco.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">Libro Blanco</a>
+      <a href="https://stellar.expert/explorer/public/asset/PYGC-GAT5HZDEADRF43OVZRDEASYDEADTJS4KNE754M74NHA3Z3S54O6RPLUJ" target="_blank" rel="noopener noreferrer" class="btn-primary">Auditar en la Blockchain</a>
+    </div>
+  </main>
+  <footer>
+    © 2025 <a href="https://linktr.ee/asolfandco" target="_blank" rel="noopener noreferrer" style="color: #FF0100; text-decoration: underline;">Asolf & Co.</a>
+  </footer>
+</body>
+</html>
